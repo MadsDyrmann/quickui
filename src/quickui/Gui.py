@@ -1,5 +1,9 @@
-from python_qt_binding.QtCore import qWarning
-from python_qt_binding.QtGui import QWidget, QFrame,QVBoxLayout
+try:
+    from python_qt_binding.QtCore import qWarning
+    from python_qt_binding.QtGui import QWidget, QFrame,QVBoxLayout 
+except:
+    from PyQt5.QtCore import qWarning
+    from PyQt5 import  QtWidgets #works for pyqt5
 
 class Gui():
     
