@@ -1,6 +1,10 @@
 
 import Traverser
-from python_qt_binding.QtGui import QFrame,QPushButton,QLabel,QWidget,QVBoxLayout,QHBoxLayout,QGroupBox,QGridLayout,QScrollArea
+try:
+    from python_qt_binding.QtGui import QFrame,QPushButton,QLabel,QWidget,QVBoxLayout,QHBoxLayout,QGroupBox,QGridLayout,QScrollArea
+except:
+    from PyQt5.QtWidgets import QFrame,QPushButton,QLabel,QWidget,QVBoxLayout,QHBoxLayout,QGroupBox,QGridLayout,QScrollArea    
+
 from quickui.pyqtElements.RosToggleButton import RosToggleButton 
 from quickui.pyqtElements.RosLabel import RosLabel
 from quickui.pyqtElements.RosSlider import RosSlider
