@@ -2,7 +2,9 @@ try:
     from python_qt_binding.QtGui import QSlider
     from python_qt_binding import QtCore
 except:
-    from PyQt5.QtWidgets import QGroupBox,QGridLayout,QLabel    
+    from PyQt5 import QtCore
+    from PyQt5.QtWidgets import QSlider
+    
 
 
 import RosHelper
