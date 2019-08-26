@@ -1,7 +1,7 @@
 try:
     from python_qt_binding.QtGui import QApplication 
 except:
-    from PyQt5.QWidgets import QApplication
+    from PyQt5.QtWidgets import QApplication
 
 import sys
 from .RosLabel import RosLabel
