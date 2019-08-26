@@ -1,5 +1,9 @@
-from python_qt_binding.QtGui import QPushButton
-from python_qt_binding import QtCore
+try:
+    from python_qt_binding.QtGui import QPushButton
+    from python_qt_binding import QtCore
+except:
+    from PyQt5.QtWidgets import QPushButton
+    from PyQt5 import QtCore    
 import RosHelper
 
 class RosToggleButton(QPushButton):
