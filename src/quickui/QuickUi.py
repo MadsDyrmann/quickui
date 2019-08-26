@@ -1,5 +1,8 @@
+try:
+    from python_qt_binding.QtGui import QApplication 
+except:
+    from PyQt5.QWidgets import QApplication
 
-from python_qt_binding.QtGui import QApplication 
 import sys
 from .RosLabel import RosLabel
 from .Group import Group
