@@ -1,7 +1,10 @@
 
+try:
+    from python_qt_binding import QtGui
+    from python_qt_binding.QtCore import QTimer
+except:
+    from PyQt.QtWidgets import QGroupBox,QGridLayout,QLabel
 
-from python_qt_binding import QtGui
-from python_qt_binding.QtCore import QTimer
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 

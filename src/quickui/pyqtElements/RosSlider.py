@@ -1,5 +1,10 @@
-from python_qt_binding.QtGui import QSlider
-from python_qt_binding import QtCore
+try:
+    from python_qt_binding.QtGui import QSlider
+    from python_qt_binding import QtCore
+except:
+    from PyQt5.QtWidgets import QGroupBox,QGridLayout,QLabel    
+
+
 import RosHelper
 
 class RosSlider(QSlider):

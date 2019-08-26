@@ -1,4 +1,9 @@
-from python_qt_binding.QtGui import QGroupBox,QGridLayout,QLabel
+try:
+    from python_qt_binding.QtGui import QGroupBox,QGridLayout,QLabel
+except:
+    from PyQt5.QtWidgets import QGroupBox,QGridLayout,QLabel
+
+
 import RosHelper
 
 class RosMsgView(QGroupBox):
