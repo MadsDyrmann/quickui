@@ -1,7 +1,7 @@
 try:
     from python_qt_binding.QtGui import QLabel
 except:
-    from from PyQt5.QtWidgets import QLabel
+    from PyQt5.QtWidgets import QLabel
 import RosHelper
 
 class RosLabel(QLabel):
