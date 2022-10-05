@@ -5,12 +5,12 @@ try:
 except:
     from PyQt.QtWidgets import QGroupBox,QGridLayout,QLabel
 
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
+#from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
 import numpy as np
 
-import RosHelper
+from ..jsElements import RosHelper
 import collections
 
 class RosPlot(FigureCanvas):

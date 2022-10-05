@@ -10,7 +10,7 @@ from .Gui import Gui
 from .RosToggleButton import RosToggleButton
 from .RosSlider import RosSlider
 from .RosPlot import RosPlot
-from traversers.pyqtTraverser import pyqtTraverse
+from .traversers.pyqtTraverser import pyqtTraverse
 import rospy
 from quickui.traversers.StringTraverser import StringTraverse
 from .RosMsgView import RosMsgView
@@ -47,7 +47,7 @@ def gui(gui_name,layout,*components):
     if __top is None:
         __top = Gui(gui_name,layout,components)
     else:
-        print "<<< error populating model: gui can only appear once"
+        print("<<< error populating model: gui can only appear once")
     
     return __top
       

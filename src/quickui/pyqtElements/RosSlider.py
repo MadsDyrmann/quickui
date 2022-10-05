@@ -7,7 +7,10 @@ except:
     
 
 
-import RosHelper
+#import RosHelper
+from ..jsElements import RosHelper
+import roslib.message
+import rospy
 
 class RosSlider(QSlider):
     def __init__(self,parent,label_name,topic_name,topic_type,topic_field,min_max_tuple,default):
@@ -25,9 +28,10 @@ class RosSlider(QSlider):
         self.default = int(( default - self.factor_b ) / self.factor_a) 
         
         if self.default is not None:
-            print "setting default to:", self.default, "%"
+            print("setting default to:", self.default, "%")
             self.setValue(self.default )
-        
+            
+        print('Topic type', self.topic_type)
         self.publisher = RosHelper.create_publisher_from_type(self.topic_name,self.topic_type)
         self.valueChanged.connect(self.onval)
         
@@ -37,6 +41,7 @@ class RosSlider(QSlider):
         val = float(val) * self.factor_a + self.factor_b
         #print "value:", val, " a: ", self.factor_a, " b: ",self.factor_b
         msg = RosHelper.create_msg_from_type(self.topic_type)
+
 
         #  iterate through msg attributes according to topic field and write value
         r = msg

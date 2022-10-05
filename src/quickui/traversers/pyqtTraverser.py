@@ -1,5 +1,6 @@
 
-import Traverser
+from .Traverser import Traverser as Traverser
+
 try:
     from python_qt_binding.QtGui import QFrame,QPushButton,QLabel,QWidget,QVBoxLayout,QHBoxLayout,QGroupBox,QGridLayout,QScrollArea
 except:
@@ -11,7 +12,7 @@ from quickui.pyqtElements.RosSlider import RosSlider
 from quickui.pyqtElements.RosPlot import RosPlot
 from quickui.pyqtElements.RosMsgView import RosMsgView
 
-class pyqtTraverse(Traverser.Traverser):
+class pyqtTraverse(Traverser):
     def __init__(self):
         self.parent = None
         self.nesting_stack = []

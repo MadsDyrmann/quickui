@@ -3,8 +3,7 @@ try:
 except:
     from PyQt5.QtWidgets import QGroupBox,QGridLayout,QLabel
 
-
-import RosHelper
+from ..jsElements import RosHelper
 
 class RosMsgView(QGroupBox):
     def __init__(self,parent,name,topic_name,topic_type,topic_fields):
@@ -16,7 +15,7 @@ class RosMsgView(QGroupBox):
         self.layout = QGridLayout()
         self.__populate_self()
         self.subscriber = RosHelper.create_subscriber_from_type(self.topic_name,self.topic_type,self.onmsg)
-        
+                
     def __populate_self(self):
         i = 1
         if len(self.topic_fields) == 0:

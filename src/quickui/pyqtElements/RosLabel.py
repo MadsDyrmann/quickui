@@ -2,7 +2,8 @@ try:
     from python_qt_binding.QtGui import QLabel
 except:
     from PyQt5.QtWidgets import QLabel
-import RosHelper
+
+from ..jsElements import RosHelper
 
 class RosLabel(QLabel):
     def __init__(self,parent,label_name,topic_name,topic_type,topic_field):

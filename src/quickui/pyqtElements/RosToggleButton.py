@@ -4,7 +4,9 @@ try:
 except:
     from PyQt5.QtWidgets import QPushButton
     from PyQt5 import QtCore    
-import RosHelper
+
+from ..jsElements import RosHelper
+
 
 class RosToggleButton(QPushButton):
     def __init__(self,parent,btn_name,topic_name,topic_type,topic_field,toggle_dict):
@@ -15,7 +17,9 @@ class RosToggleButton(QPushButton):
         self.topic_field = topic_field
         self.toggle_dict = toggle_dict
         self.setText("N/A")
-        self.publisher = RosHelper.create_publisher_from_type(self.topic_name,self.topic_type)
+
+        self.publisher = RosHelper.create_publisher_from_type(self.topic_name, self.topic_type)
+
         self.clicked.connect(self.onclick)
         self.cur_idx = 0
         self.max_idx = len(toggle_dict.keys())-1
